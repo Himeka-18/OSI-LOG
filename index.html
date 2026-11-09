@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>推しログ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="app-header">
+    <h1 id="header-title">ホーム</h1>
+  </header>
+
+  <!-- メインコンテンツエリア -->
+  <main class="app-content">
+
+    <!-- 1. ホーム画面 -->
+    <section id="tab-home" class="tab-content active">
+      <h2>ダッシュボード</h2>
+      <div class="card">
+        <h3>次のライブまで</h3>
+        <p class="highlight-text">あと <span id="countdown-days">--</span> 日</p>
+      </div>
+      <div class="card">
+        <h3>今日の名言</h3>
+        <p id="daily-quote">「推しは推せる時に推せ」</p>
+      </div>
+    </section>
+
+    <!-- 2. スケジュール＆ToDo画面 -->
+    <section id="tab-schedule" class="tab-content">
+      <h2>スケジュール＆ToDo</h2>
+      <div class="card">
+        <h3>直近の予定</h3>
+        <ul class="list">
+          <li>11/10 - チケット入金期限</li>
+          <li>11/15 - 新曲MV公開</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 収支＆推し貯金画面 -->
+    <section id="tab-money" class="tab-content">
+      <h2>収支・推し貯金</h2>
+      <div class="card">
+        <h3>今月の支出</h3>
+        <p class="highlight-text">¥0</p>
+      </div>
+    </section>
+
+    <!-- 4. 参戦ログ＆マップ画面 -->
+    <section id="tab-log" class="tab-content">
+      <h2>参戦ログ・マップ</h2>
+      <div class="card">
+        <h3>参戦履歴</h3>
+        <p>まだ記録がありません</p>
+      </div>
+    </section>
+
+    <!-- 5. 推し図鑑画面 -->
+    <section id="tab-zukan" class="tab-content">
+      <h2>推し図鑑</h2>
+      <div class="card">
+        <h3>登録された名言</h3>
+        <p>1件</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 下部タブナビゲーション -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-tab="tab-home" data-title="ホーム">
+      <span class="icon">🏠</span>
+      <span class="label">ホーム</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-schedule" data-title="予定・ToDo">
+      <span class="icon">📅</span>
+      <span class="label">予定</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-money" data-title="収支・貯金">
+      <span class="icon">💰</span>
+      <span class="label">収支</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-log" data-title="参戦ログ">
+      <span class="icon">🎤</span>
+      <span class="label">ログ</span>
+    </button>
+    <button class="tab-btn" data-tab="tab-zukan" data-title="推し図鑑">
+      <span class="icon">📖</span>
+      <span class="label">図鑑</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
